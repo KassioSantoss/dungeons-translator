@@ -1,0 +1,4 @@
+name: dungeons-translator
+version: '1.0-SNAPSHOT'
+main: brcomkassin.dungeonstranslator.DungeonsTranslatorPlugin
+api-version: '1.21'
