@@ -4,14 +4,16 @@ import lombok.Getter;
 
 @Getter
 public enum Lang {
-    PT("pt_br"),
-    EN("en_us"),
-    ES("es_es");
+    PT("pt_br", "messages"),
+    EN("en_us", "messages"),
+    ES("es_es", "messages");
 
     private final String localeCode;
+    private final String rootKey;
 
-    Lang(String localeCode) {
+    Lang(String localeCode, String rootKey) {
         this.localeCode = localeCode;
+        this.rootKey = rootKey;
     }
 
     public static Lang fromLocale(String rawLocale) {

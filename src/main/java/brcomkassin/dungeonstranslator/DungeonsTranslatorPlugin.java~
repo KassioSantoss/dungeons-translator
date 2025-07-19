@@ -1,9 +1,8 @@
 package brcomkassin.dungeonstranslator;
 
-import brcomkassin.dungeonstranslator.prefix.PrefixProvider;
+import brcomkassin.dungeonstranslator.handler.PrefixProvider;
 import brcomkassin.dungeonstranslator.initializer.LangInitializer;
 import brcomkassin.dungeonstranslator.lang.LangFileGenerator;
-import brcomkassin.dungeonstranslator.prefix.TranslatorPrefix;
 import lombok.Getter;
 import org.bukkit.plugin.java.JavaPlugin;
 

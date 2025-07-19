@@ -26,7 +26,7 @@ dependencies {
 
 
 jar {
-    destinationDirectory = file('K:/Area De Trabalho/Server RPG/plugins')
+    destinationDirectory = file('K:/Area De Trabalho/RPGServer/plugins')
 }
 
 tasks {

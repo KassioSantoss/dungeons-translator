@@ -27,10 +27,27 @@ public class LangManager {
      */
     public static String getMessage(String prefix, Lang lang, String path) {
         FileConfiguration langConfig = LangProvider.get(prefix, lang);
+
         if (langConfig == null) {
             return "§c[Lang] Arquivo de linguagem não carregado: " + lang.name();
         }
+
+        KColoredLogger.info("[getMessage] Path: " + langConfig);
+        KColoredLogger.info("[getMessage] PathString: " + path);
+
+        for (String key : langConfig.getKeys(false)) {
+            KColoredLogger.info("[getMessage] Key: " + key);
+        }
+
+//        if (langConfig.getString(path) != null) {
+//            List<String> lines = langConfig.getStringList(path);
+//            KColoredLogger.info("[getMessage] Lines: " + lines);
+//            return String.join("\n", lines);
+//        }
+
         String message = langConfig.getString(path);
+        KColoredLogger.info("[getMessage] Message: " + message);
+
         return message != null ? message : "§c[Lang] Mensagem não encontrada: " + path;
     }
 
